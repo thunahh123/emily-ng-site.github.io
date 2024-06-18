@@ -46,9 +46,9 @@
         margin: 0 auto 2rem;
     }
 
-    .about-containers{
+    /* .about-containers{
         margin-top: 0;
-    }
+    } */
 }
 
 @media screen and (max-width:600px){
