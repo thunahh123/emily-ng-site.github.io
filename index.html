@@ -6,15 +6,25 @@
     <title>Emily Nguyen</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/mediaqueries.css" />
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
   </head>
+
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Emily Nguyen</div>
+      <div class="logo"><a href="#profile">Emily Nguyen</a></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -29,21 +39,37 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
+    <main>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/IMG_8852.jpeg" alt="Emily profile picture" />
+        <img src="./assets/IMG_8852.jpeg" alt="Emily profile picture" class="profile-pic"/>
       </div>
 
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Emily Nguyen</h1>
-        <p class="section__text__p2">Junior Developer</p>
+        <p class="section__text__p2">
+          Junior Developer
+          <!-- <TypeAnimation
+          sequence={[
+              'Developer',
+              1000,
+              'Problem Solver',
+              1000,
+              'Student',
+              1000,
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+      /> -->
+        </p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -60,13 +86,14 @@
             src="./assets/linkedin (1).png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://www.linkedin.com/in/emily-nguyen-211344105/'"
+            onclick="window.open('https://www.linkedin.com/in/emily-nguyen-211344105')"
+            
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/thunahh123'"
+            onclick="window.open('https://github.com/thunahh123')"
           />
         </div>
       </div>
@@ -112,256 +139,103 @@
           <div class="text-container">
             <p>
               I am a new graduate (Dec 2023) from the Computer Systems
-              Technology program at Mohawk College specializing in Software
-              Development. I create user-friendly web pages with HTML, CSS, and
-              JavaScript. Recently, I've been using a lot of React and Vue with
-              Laravel or Express.js on the back-end. I'm always looking for a
-              cool new language/framework to experiment and build with. What can
-              I build to make your life easier?
+              Technology program at <strong>Mohawk College</strong> specializing
+              in Software Development. I create user-friendly web pages with
+              HTML, CSS, and JavaScript. Recently, I've been using a lot of
+              React for front-end and Laravel (PHP) or Django (Python) on the back-end. I'm
+              always looking for a cool new language/framework to experiment and
+              build with. What can I build to make your life easier?
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Front-end Tools</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+          <div class="skill-container">
+            <img class="skill-icon" src="./assets/html.png" alt="HTML icon" />
+            <p class="skill-label">HTML</p>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Back-end Tools</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+          <div class="skill-container">
+            <img class="skill-icon" src="./assets/css.png" alt="CSS icon" />
+            <p class="skill-label">CSS</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="skill-icon"
+              src="./assets/javascript.png"
+              alt="JavaScript icon"
+            />
+            <p class="skill-label">JavaScript</p>
+          </div>
+          <div class="skill-container">
+            <img class="skill-icon" src="./assets/react.png" alt="React icon" />
+            <p class="skill-label">React</p>
+          </div>
+          <div class="skill-container">
+            <img class="skill-icon" src="./assets/php.png" alt="PHP icon" />
+            <p class="skill-label">PHP</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="skill-icon"
+              src="./assets/laravel.jpg"
+              alt="Laravel icon"
+            />
+            <p class="skill-label">Laravel</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="skill-icon"
+              src="./assets/python.png"
+              alt="Python icon"
+            />
+            <p class="skill-label">Python</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="skill-icon"
+              src="./assets/django.png"
+              alt="Django icon"
+            />
+            <p class="skill-label">Django</p>
+          </div>
+          <div class="skill-container">
+            <img class="skill-icon" src="./assets/java.jpg" alt="Java icon" />
+            <p class="skill-label">Java</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="skill-icon"
+              src="./assets/bootstrap.png"
+              alt="Bootstrap icon"
+            />
+            <p class="skill-label">Bootstrap</p>
+          </div>
+          <div class="skill-container">
+            <img class="skill-icon" src="./assets/sql.png" alt="SQL icon" />
+            <p class="skill-label">SQL</p>
+          </div>
+          <div class="skill-container">
+            <img
+              class="skill-icon"
+              src="./assets/github.png"
+              alt="Github icon"
+            />
+            <p class="skill-label">Github</p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/recipe.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Recipe Management
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/thunahh123/myrecipes-django'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/thunahh123/myrecipes-django'"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/airline-project.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Airline Django</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/thunahh123/airline-django'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/thunahh123/airline-django'"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/recipe2.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Capstone Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/thunahh123/capstone-backend'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/thunahh123/capstone-backend'"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
+      <div id="projects-container" class="projects-container"></div>
     </section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -394,6 +268,7 @@
         </div>
       </div>
     </section>
+  </main>
     <footer>
       <nav>
         <div class="nav-links-container">
@@ -405,8 +280,77 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Emily Nguyen, All Rights Reserved.</p>
+      <p>Copyright &#169; <span id="date"></span> Emily Nguyen Development, All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
+    <script type="text/babel">
+      function App() {
+        const [hovered, setHovered] = React.useState(-1);
+        const myProjects = [
+          {
+            id: 0,
+            title: "Capstone Project",
+            url: "https://github.com/thunahh123/capstone-backend",
+            img: "./assets/cottage.jpg",
+            git: "",
+            desc: "Recipe management app using React and Laravel",
+          },
+          {
+            id: 1,
+            title: "Airline Django",
+            url: "https://github.com/thunahh123/airline-django",
+            img: "./assets/flowers.jpg",
+            git: "",
+            desc: "Using Django to build an app for airplanes management",
+          },
+          {
+            id: 2,
+            title: "Emily's Recipe Django",
+            url: "https://github.com/thunahh123/myrecipes-django",
+            img: "./assets/strawberry.jpg",
+            git: "",
+            desc: "Rebuild of my capstone project using Django framework",
+          },
+          {
+            id: 3,
+            title: "Personal Portfolio",
+            url: "https://github.com/thunahh123/emily-ng-site.github.io",
+            img: "./assets/fall.jpg",
+            git: "",
+            desc: "Develop personal portfolio using HTML, CSS, React.",
+          },
+          
+        ];
+        return (
+          <>
+            {myProjects.map((p) => (
+              <div
+                className="project"
+                style={{ backgroundImage: "url(" + p.img + ")" }}
+                key={p.id}
+                onMouseOver={() => {
+                  setHovered(p.id);
+                }}
+                onMouseOut={() => {
+                  setHovered(-1);
+                }}
+              >
+                <a target="_blank" href={p.url}>
+                  <div>
+                    <p className="project-title">{p.title}</p>
+                    {hovered === p.id ? <p className="project-desc">{p.desc}</p> : <></>}
+                  </div>
+                </a>
+              </div>
+            ))}
+          </>
+        );
+      }
+      const root = ReactDOM.createRoot(
+        document.getElementById("projects-container")
+      );
+      root.render(<App />);
+    </script>
   </body>
 </html>
