@@ -459,7 +459,7 @@ article .icon{
     padding-left: 1rem;
     padding-right: 1rem;
     background-size: cover;
-    background-position: center;
+    background-position: left;
 }   
 
 
@@ -481,9 +481,10 @@ article .icon{
 .project:hover{
     transition: all .2s ease-in-out;
     transform: scale(1.1);
-    .project-title{
+    /* .project-title{
         background-color: rgb(224, 100, 120);
-    }
+    } */
+    
 }
 
 
